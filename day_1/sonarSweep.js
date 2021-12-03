@@ -1,13 +1,6 @@
-import fs from 'fs';
-import Promise from 'bluebird';
+import dataParser from '../helper/dataParser.js';
 
-const fsAsync= Promise.promisifyAll(fs);
-
-let sonarData = await fsAsync.readFileAsync('./data.txt', 'utf8')
-.then(data => {
-    data = data.split('\n').map(num => parseInt(num));
-    return data;
-});
+const sonarData = await dataParser('./data.txt');
 
 const findDepthMeasurementIncreases = measurements => {
     let timesIncreased = 0;
@@ -27,6 +20,6 @@ const findSlidingWindowDepthMeasurementIncreases = measurements => {
     return timesIncreased;
 }
 
-//const increases = findDepthMeasurementIncreases(sonarData);
-//const slidingWindowIncreases = findSlidingWindowDepthMeasurementIncreases(sonarData);
+// const increases = findDepthMeasurementIncreases(sonarData);
+// const slidingWindowIncreases = findSlidingWindowDepthMeasurementIncreases(sonarData);
 
