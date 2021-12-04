@@ -1,6 +1,5 @@
 import dataParser from '../helper/dataParser.js';
-
-const sonarData = await dataParser('./data.txt');
+const sonarData = await dataParser('./data.txt', data => data.map(intString => parseInt(intString)));
 
 const findDepthMeasurementIncreases = measurements => {
     let timesIncreased = 0;
