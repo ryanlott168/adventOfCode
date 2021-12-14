@@ -10,9 +10,9 @@ const readFileAsync= Promise.promisify(fs.readFile);
  * @param {function} parsingFn A function used to parse the data in a problem specific way.
  * This function should return the post-parsed data. (optional)
  */
-export default async (fileName, parsingFn) => {
+export default async (fileName, separator, parsingFn) => {
     let data = await readFileAsync(fileName, 'utf8');
-    data = data.split('\n');
+    data = data.split(separator ? separator : '\n');
 
     return parsingFn ? parsingFn(data) : data;
 };
