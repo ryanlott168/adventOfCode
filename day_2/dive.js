@@ -1,7 +1,6 @@
 import dataParser from '../helper/dataParser.js';
 
-
-const submarineInstructions = await dataParser('./data.txt', data => {
+const submarineInstructions = await dataParser('./data.txt', null, data => {
     return data.map(instructions => instructions.split(' '));
 });
 
@@ -23,7 +22,6 @@ const findFinalLocation = instructions => {
     }
     return horizontalPosition * depthPosition;
 }
-
 
 const findFinalLocationWithAim = instructions => {
     let horizontalPosition = 0;
@@ -49,3 +47,5 @@ const findFinalLocationWithAim = instructions => {
 
 // const finalLocation = findFinalLocation(submarineInstructions);
 // const finalLocationWithAim = findFinalLocationWithAim(submarineInstructions);
+// console.log(finalLocation);
+// console.log(finalLocationWithAim);

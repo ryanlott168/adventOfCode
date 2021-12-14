@@ -39,7 +39,8 @@ const findPowerConsumption = data => {
     return powerConsumption;
 }
 
-// findPowerConsumption(diagnosticReportData);
+// const powerConsumption = findPowerConsumption(diagnosticReportData);
+// console.log(powerConsumption);
 
 
 // Part 2.
@@ -105,4 +106,5 @@ const findLifeSupportRating = data => {
     return lifeSupportRating
 }
 
-// findLifeSupportRating(diagnosticReportData);
+// const lifeSupportRating = findLifeSupportRating(diagnosticReportData);
+// console.log(lifeSupportRating);
