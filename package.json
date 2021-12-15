@@ -1,0 +1,22 @@
+{
+  "name": "adventofcode-2021",
+  "version": "1.0.0",
+  "description": "Solutions to Advent of Code 2021 Release ",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanlott168/adventOfCode-2021.git"
+  },
+  "author": "Ryan Lott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanlott168/adventOfCode-2021/issues"
+  },
+  "homepage": "https://github.com/ryanlott168/adventOfCode-2021#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  }
+}
