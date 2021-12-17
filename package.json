@@ -16,7 +16,8 @@
     "url": "https://github.com/ryanlott168/adventOfCode-2021/issues"
   },
   "homepage": "https://github.com/ryanlott168/adventOfCode-2021#readme",
-  "dependencies": {
-    "bluebird": "^3.7.2"
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "typescript": "^4.5.4"
   }
 }
