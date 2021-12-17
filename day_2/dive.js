@@ -1,6 +1,9 @@
+import path from 'path';
 import dataParser from '../helper/dataParser.js';
 
-const submarineInstructions = await dataParser('./data.txt', null, data => {
+const dataPath = path.resolve('day_2/data.txt');
+
+const submarineInstructions = await dataParser(dataPath, null, data => {
     return data.map(instructions => instructions.split(' '));
 });
 

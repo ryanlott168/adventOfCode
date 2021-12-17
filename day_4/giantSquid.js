@@ -1,6 +1,9 @@
+import path from 'path';
 import dataParser from '../helper/dataParser.js';
 
-const bingoData = await dataParser('./data.txt', '\n\n', data => {
+const dataPath = path.resolve('day_4/data.txt');
+
+const bingoData = await dataParser(dataPath, '\n\n', data => {
     data = data.map(row => {
         row = row.split('\n');
         return row

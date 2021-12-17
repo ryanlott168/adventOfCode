@@ -1,6 +1,10 @@
+import path from 'path';
 import dataParser from '../helper/dataParser.js';
 
-const ventLineData = await dataParser('./data.txt', null, data => data.map(coordinateSet => {
+const dataPath = path.resolve('day_5/data.txt');
+
+
+const ventLineData = await dataParser(dataPath, null, data => data.map(coordinateSet => {
     coordinateSet = coordinateSet.split(' -> ');
     return coordinateSet.map(coordinate => {
         return  coordinate.split(',').map(number => parseInt(number));
@@ -89,4 +93,4 @@ ventLineDiagram = addVentLinesToDiagram(ventLineData, ventLineDiagram);
 
 // Returns overlapCount
 const overlapCount = findVentLineOverlapPoints(ventLineDiagram);
-
+// console.log(overlapCount);

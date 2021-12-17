@@ -1,6 +1,9 @@
+import path from 'path';
 import dataParser from '../helper/dataParser.js';
 
-const diagnosticReportData = await dataParser('./data.txt');
+const dataPath = path.resolve('day_3/data.txt');
+
+const diagnosticReportData = await dataParser(dataPath);
 
 const binaryToDecimalConverter = binaryNumber => {
     binaryNumber = binaryNumber.split('').reverse();

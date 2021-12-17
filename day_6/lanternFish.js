@@ -1,6 +1,9 @@
+import path from 'path';
 import dataParser from '../helper/dataParser.js';
 
-const daysTillSpawnPerFish = await dataParser('./data.txt', ',');
+const dataPath = path.resolve('day_6/data.txt');
+
+const daysTillSpawnPerFish = await dataParser(dataPath, ',');
 
 // Part 1. Naive Solution
 const findHowManyFishAfterGivenDays = (dayCount, daysTillSpawnPerFish) => {
