@@ -2,10 +2,9 @@ import path from 'path';
 import dataParser from '../helper/dataParser.js';
 
 const dataPath = path.resolve('day_7/data.txt');
+const parsingFn = (data: string[]): number[] => data.map(position => parseInt(position));
+const crabPositionData = await dataParser(dataPath, ',').then(data => parsingFn(data));
 
-const crabPositionData: number[] = await dataParser(dataPath, ',', (data: string[]) => data.map(position => parseInt(position)));
-
-const sampleData = [16,1,2,0,4,2,7,1,2,14]
 let range = crabPositionData.reduce((prev, curr) => {
     if(prev[0] > curr) prev[0] = curr;
     if(prev[1] < curr) prev[1] = curr;
@@ -28,7 +27,7 @@ const findBestPositionAndFuelCost = (range: number[], crabPositionData: number[]
             bestPosition = i;
         }
     }
-    return {bestPosition, lowestCost};
+    return { bestPosition, lowestCost };
 }
 
 

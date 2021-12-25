@@ -1,8 +1,8 @@
 import path from 'path';
 import dataParser from '../helper/dataParser.js';
 const dataPath = path.resolve('day_7/data.txt');
-const crabPositionData = await dataParser(dataPath, ',', (data) => data.map(position => parseInt(position)));
-const sampleData = [16, 1, 2, 0, 4, 2, 7, 1, 2, 14];
+const parsingFn = (data) => data.map(position => parseInt(position));
+const crabPositionData = await dataParser(dataPath, ',').then(data => parsingFn(data));
 let range = crabPositionData.reduce((prev, curr) => {
     if (prev[0] > curr)
         prev[0] = curr;
